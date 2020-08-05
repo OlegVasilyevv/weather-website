@@ -11,7 +11,9 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find location', undefined)
         } else {
             let temp = Math.ceil(body.current.temp - 273)
-            callback(undefined, `Temperature is ${temp}`)
+            let main = body.current.weather[0].main
+            let mainDescription = body.current.weather[0].description
+            callback(undefined, `Temperature is ${temp}. ${main}: ${mainDescription}`)
         }
     })
 }
