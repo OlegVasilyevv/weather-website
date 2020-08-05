@@ -1,3 +1,5 @@
+//npm run dev
+
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
@@ -64,12 +66,6 @@ app.get('/weather', (req, res) => {
             })
         })
     })
-
-    // res.send({
-    //     forecast: 'It is 27 degrees outside',
-    //     location: 'Orel, Russia',
-    //     address: req.query.address
-    // })
 })
 
 app.get('/products', (req, res) => {
